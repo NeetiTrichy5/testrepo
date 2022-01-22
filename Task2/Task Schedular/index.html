@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Task Schedular</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="evo-calendar.min.css">
+        <link rel="stylesheet" href="evo-calendar.orange-coral.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="clock.js">
+    </head>
+    <body>
+        
+        <div class="hero">
+        <div id="calendar"></div> 
+        <div>
+            <div style="color: white;"></div>
+            <div id="Clock" class="glow">00:00:00</div>
+         </div>
+         <script src= clock.js></script>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+        <script src="evo-calendar.min.js">
+        </script>
+        <script>
+            $(document).ready(function()
+      {
+            $('#calendar').evoCalendar({
+            // settingName: settingValue
+            theme: "Orange Coral",
+            calendarEvents: [
+      {
+        id: 'event1', // Event's ID (required)
+        name: "New Year", // Event name (required)
+        date: "January/1/2022", // Event date (required)
+        type: "holiday", // Event type (required)
+        everyYear: true, // Same event every year (optional)
+        description: "May you fill your New Year with new adventures, accomplishments, and learning!"
+      },
+      {
+        id: 'event2', // Event's ID (required)
+        name: "Republic Day", // Event name (required)
+        date: "January/26/2022", // Event date (required)
+        type: "holiday", // Event type (required)
+        everyYear: true, // Same event every year (optional)
+        description: "Celebrating the day the Constitution of India came into force… And remembering the brave hearts of Indian Independence"
+      },
+      {
+        id: 'event3', // Event's ID (required)
+        name: "Makar Sakranti", // Event name (required)
+        date: "January/14/2022", // Event date (required)
+        type: "holiday", // Event type (required)
+        everyYear: true, // Same event every year (optional)
+        description: " May this harvest festival help you reap a lot of success and happiness in your life."
+      },
+      {
+        name: "Vacation Leave",
+        badge: "02/13 - 02/15", // Event badge (optional)
+        date: ["January/13/2022", "January/15/2022"], // Date range
+        description: "Vacation leave for 3 days.", // Event description (optional)
+        type: "event",
+        color: "#63d867" // Event custom color (optional)
+      }
+    ]
+    })
+
+    
+    // removeCalendarEvent
+    // $('#calendar').evoCalendar('removeCalendarEvent', 'event1');
+})
+
+        </script>
+
+    </body>
+</html>
